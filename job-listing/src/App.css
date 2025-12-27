@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+}
+.card {
+  background: white;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid transparent;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  position: relative;
+  gap: 20px;
+  top: 20px;
+  margin: 0 auto 30px auto;
+}
+
+.card--featured {
+  border-left: 5px solid hsl(180, 29%, 50%);
+}
+
+.card-logo {
+  width: 60px;
+  height: 60px;
+}
+
+.card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.card-company {
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.card-new,
+.card-featured {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: white;
+}
+
+.card-new {
+  background-color: hsl(180, 29%, 50%);
+}
+
+.card-featured {
+  background-color: hsl(180, 14%, 20%);
+}
+
+.card-position {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 4px 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.card-position:hover {
+  color: hsl(180, 29%, 50%);
+}
+
+.card-details {
+  font-size: 13px;
+  color: hsl(180, 8%, 52%);
+  font-weight: 500;
+}
+
+.card-tags {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.filter {
+  cursor: pointer;
+  background-color: hsl(180, 31%, 95%);
+  color: hsl(180, 29%, 50%);
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter:hover {
+  background-color: hsl(180, 29%, 50%);
+  color: white;
+}
+
+.cross {
+  cursor: pointer;
+  position: absolute;
+  height: 100%;
+  right: -18px;
+  top: 0px;
+  background-color: hsl(180, 29%, 50%);
+  border-radius: 0 5px 5px 0;
+  padding: 5px;
+  border: 1px solid hsl(180, 29%, 50%);
+  color: white;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cross:hover {
+  background-color: hsl(180, 14%, 20%);
+}
+
+header {
+  position: relative;
+  z-index: 1;
+}
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  background-color: white;
+  margin: -60px auto 30px auto;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  z-index: 10;
+  position: relative;
+  z-index: 10;
+}
+
+.filter-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex: 1;
+}
+
+.clear {
+  padding: 8px 12px;
+  color: hsl(180, 8%, 52%);
+  cursor: pointer;
+  transition: text-decoration 0.2s ease, color 0.2s ease;
+  align-self: center;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+.clear:hover {
+  color: hsl(180, 29%, 50%);
+  text-decoration: underline;
+}
+
+.line {
+  display: none;
+  width: 90vw;
+  height: 1px;
+  background-color: hsl(180, 8%, 52%);
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    align-items: flex-start;
+    padding: 20px;
+    gap: 15px;
+    margin: 0 auto 40px auto;
+  }
+
+  .card-logo {
+    width: 50px;
+    height: 50px;
+    margin-top: -40px;
+  }
+
+  .card-top {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .card-tags {
+    margin-left: 0;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .card-position {
+    font-size: 16px;
+  }
+
+  .card-details {
+    font-size: 12px;
+  }
+
+  .card-info {
+    gap: 6px;
+    margin-left: -50px;
+    margin-top: 30px;
+  }
+  .line {
+    display: block;
+  }
+
+  .filter-items {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card {
+    max-width: 1100px;
+  }
+}
